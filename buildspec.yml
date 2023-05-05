@@ -12,7 +12,7 @@ phases:
 
       - REPOSITORY_URI=075577609825.dkr.ecr.eu-north-1.amazonaws.com/indhujarepo
       
-      - IMAGE_TAG=$CODEBUILD_BUILD_NUMBER
+      - IMAGE_TAG=build$CODEBUILD_BUILD_NUMBER
       
       - IMAGE_URI=$REPOSITORY_URI:$IMAGE_TAG
       
