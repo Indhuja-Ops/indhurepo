@@ -1,14 +1,6 @@
 version: 0.2
 
 env:
-
-  variables:
-
-    IMAGE_REPO_NAME: "075577609825.dkr.ecr.eu-north-1.amazonaws.com/indhujarepo"
-    
-    IMAGE_TAG: "latest"
-    
-    AWS_DEFAULT_REGION: "eu-north-1
     
 phases:
 
@@ -20,7 +12,7 @@ phases:
 
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $IMAGE_REPO_NAME.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
 
-      - REPOSITORY_URI=$IMAGE_REPO_NAME.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/myweb
+      - REPOSITORY_URI=$IMAGE_REPO_NAME.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/indhujarepo
       
       - IMAGE_TAG=$CODEBUILD_BUILD_NUMBER
       
@@ -48,7 +40,7 @@ phases:
       
       - echo Writing image definitions file...
       
-      - printf '[{"name":"myweb","imageUri":"%s"}]' $IMAGE_URI > imagedefinitions.json
+      - printf '[{"name":"indhujarepo","imageUri":"%s"}]' $IMAGE_URI > imagedefinitions.json
       
       - cat imagedefinitions.json
 
