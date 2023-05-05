@@ -8,7 +8,7 @@ phases:
 
       - echo Logging in to Amazon ECR...
 
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin 075577609825.dkr.ecr.eu-north-1.amazonaws.com/indhujarepo
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin 075577609825.dkr.ecr.eu-north-1.amazonaws.com
 
       - REPOSITORY_URI=$IMAGE_REPO_NAME.075577609825.dkr.ecr.eu-north-1.amazonaws.com/indhujarepo
       
