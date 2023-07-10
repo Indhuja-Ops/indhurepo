@@ -1,0 +1,23 @@
+# This is a basic YAML file example
+
+# Key-value pairs
+name: John Smith
+age: 30
+city: New York
+
+# Nested data structure
+address:
+  street: 123 Main St
+  city: New York
+  state: NY
+  postal_code: 10001
+
+# Lists
+hobbies:
+  - hiking
+  - reading
+  - cooking
+
+# Boolean values
+is_student: true
+has_pet: false
